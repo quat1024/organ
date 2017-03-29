@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans";
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+}
+
+.container {
+  width: 900px;
+  margin: 150 auto;
+  margin-top: 40px;
+  
+  min-height: 100vh;
+  background-color: white;
+  box-shadow: 0px 2px 0px 0px black;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: "Nunito";
+  font-size: 60px;
+  background-color: #e56;
+  width: 100%;
+  height: 150px;
+  line-height: 150px;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
+  margin: 0; /* thanks css */
+}
+
+h2 {
+  font-family: "Nunito";
+  font-size: 40px;
+  background-color: #6e5;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-left: 40px solid #222;
+  border-right: 40px solid #222;
+  text-align: center;
+  margin: 0;
+}
+
+h2.bordertoplol {
+  border-top: 5px solid #222;
+}
+
+.row {
+  width: 100%;
+  padding: 40px;
+  
+
+  font-size: 24px;
+  
+  border-top: 5px solid #222;
+  border-bottom: 5px solid #222;
+  
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Make 2 adj rows not make a double thick line */
+.row + .row {
+  border-top: none;
+}
+
+.row.tall {
+  height: 450px;
+}
+
+.row.short {
+  height: 250px;
+}
+
+.row.medium {
+  height: 340px;
+}
+
+.item {
+  height: 100%;
+  display: inline-block;
+  flex-grow: 1;
+}
+
+.barwrap {
+  width: 100%;
+  height: 50px;
+  background-color: #eee;
+  margin: 40px auto; 
+  text-align: right;
+  font-family: "Nunito";
+  text-align: right;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+.barwrap.border {
+  border: 1px solid #999;
+}
+
+.bar {
+  height: 100%;
+  text-align: right;
+  line-height: 48px;
+  font-weight: bold;
+  display: inline-block;
+  float: left;
+  font-family: "Nunito";
+}
+
+.sixtysix {
+  width: 66.6666%;
+}
+
+.center {
+  text-align: center;
+}
+
+.tenMinAnim {
+  animation: tenMin 600s linear 0s infinite;
+}
+
+@keyframes tenMin {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.callout:after {
+  width: 150px;
+  height: 0px;
+  line-height: 0px;
+  overflow: visible;
+  text-align: left;
+  content: attr(data-type);
+  font-size: 16px;
+  display: block;
+  position: relative;
+  bottom: -60px;
+}
+
+.callout.top:after {
+  top: -10px;
+}
+
+.callout.pushleft:after {
+  left: -30px;
+}
+
+.smoltext {
+  font-size: 75%;
+}
+
+.caption {
+  width: 100%;
+  display: block;
+}
+
+.caption + img:not(.pie) {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.pie {
+  max-width: 100%;
+  max-height: 100%;
+  }
+
+.source {
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+  padding-right: 40px;
+  color: #777;
+}
+
+.source ul {
+  text-align: center;
+  margin-left: 50%;
+  transform: translate(-50%,0);
+  list-style-type: none;
+}
